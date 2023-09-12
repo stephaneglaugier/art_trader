@@ -4,10 +4,9 @@ __version__ = "0.0-SNAPSHOT"
 import logging
 from datetime import datetime
 
-from abstract.common import Account
-from abstract.trading import Order, Trader
-
-from .common import MT5Symbol, MT5Utils, mt5
+from art_trader.abstract.common import Account
+from art_trader.abstract.trading import Order, Trader
+from art_trader.mt5.common import MT5Symbol, MT5Utils, mt5
 
 log = logging.getLogger(__name__)
 

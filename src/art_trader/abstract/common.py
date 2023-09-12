@@ -61,7 +61,10 @@ class Account(ABC):
         pass
 
     def __repr__(self) -> str:
-        return str(self.__dict__)
+        return str({
+            "balance" : self.balance,
+            "currency": self.currency
+        })
 
 
 class Trade(ABC):

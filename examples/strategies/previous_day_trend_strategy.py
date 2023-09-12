@@ -26,7 +26,10 @@ class PreviousDayTrendStrategy(MT5Strategy):
         Returns:
         Trade: An object containing trade data.
         """
-        prev_day = getPrevMarketDay(day)
+
+        day = day if day else datetime.now() # day is always None in live trading
+
+        prev_day = getPrevMarketDay(day.date())
 
         data = self.broker_utils.getDailyData(symbol, prev_day, prev_day)
 
@@ -41,7 +44,7 @@ class PreviousDayTrendStrategy(MT5Strategy):
             entry_price=close_price,
             TP=close_price * 1.02 if is_long else close_price * 0.98,
             SL=close_price * 0.98 if is_long else close_price * 1.02,
-            volume=1
+            volume=1.0
         )
 
         return trade
