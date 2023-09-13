@@ -13,4 +13,7 @@ ART_Trader is an open-source library designed to allow developers to test and tr
 - Extensibility: Built to be easily extendable to include custom metrics, data sources, and trading logic.
 
 
-To get a taste of how ART_Trader works, you can check out the example backtest [`sample_backtest.ipynb`](examples/sample_backtest.ipynb) and the example strategy [`previous_day_trend_strategy.py`](examples/strategies/previous_day_trend_strategy.py).
+To get a taste of how ART_Trader works, you can check out:
+- an example strategy [`previous_day_trend_strategy.py`](examples/strategies/previous_day_trend_strategy.py)
+- an example backtest [`sample_backtest.ipynb`](examples/sample_backtest.ipynb)
+- an example trading script [`sample_trading_script.py`](examples/sample_trading_script.py)
